@@ -52,7 +52,7 @@ public class Login extends JFrame {
 	}
 
 	public Login() {
-		setBounds(700,300,550,400);
+		setBounds(100,100,550,400);
 		setTitle("用户登录");
 		setLayout(null);
 		setResizable(false);

@@ -45,7 +45,7 @@ public class JiaoWuYuanJieMian extends JFrame {
 		b2.setBounds(0, 300, 100, 300);
 
 		b3 = new JButton("新增");
-		b3.setBounds(120, 10, 100, 30);
+
 
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -78,12 +78,27 @@ public class JiaoWuYuanJieMian extends JFrame {
 					able = new JTable(tableValue, column);
 					scrollPane = new JScrollPane(able);
 					scrollPane.setBounds(120, 60, 500, 600);
+
+					/**
+					 * 新增
+					 * 利用数组给数据库赋值
+					 *
+					 */
+					b3.setBounds(120, 10, 100, 30);
+					b3.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent e) {
+							new AddMenber();
+						}
+					});
+					add(b3);
 					add(scrollPane);
 				} catch (SQLException throwables) {
 					throwables.printStackTrace();
 				}
 			}
 		});
+
+
 
 		b2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -127,7 +142,6 @@ public class JiaoWuYuanJieMian extends JFrame {
 
 		add(b1);
 		add(b2);
-		add(b3);
 
 	}
 }
